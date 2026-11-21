@@ -1,0 +1,125 @@
+/* =========================================================================
+   LifeCare — Responsive Layer (mobile-first)
+   Base styles in style.css target phones. These min-width queries
+   progressively enhance layouts for large phones, tablets and desktops.
+   Breakpoints: 560px · 768px · 1024px · 1100px (nav) · 1280px
+   ========================================================================= */
+
+/* ---------- ≥ 560px : large phones ---------- */
+@media (min-width: 560px) {
+  :root { --gutter: 24px; }
+  .topbar__list li.md { display: flex; }
+  .dept-grid,
+  .doctor-grid,
+  .facility-grid,
+  .testimonial-grid,
+  .cond-grid,
+  .leader-grid,
+  .accred-grid,
+  .info-grid,
+  .contact-grid,
+  .cond-pills { grid-template-columns: repeat(2, 1fr); }
+  .form-grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .form-grid--2 .span-2 { grid-column: 1 / -1; }
+  .dept-full__cols { grid-template-columns: 1fr 1fr; }
+  .mv-grid { grid-template-columns: 1fr 1fr; }
+  .form-card { padding: 36px; }
+}
+
+/* ---------- ≥ 768px : tablets ---------- */
+@media (min-width: 768px) {
+  :root { --section-y: 96px; }
+  .stats__card { grid-template-columns: repeat(4, 1fr); }
+  .stat { border-width: 0 1px 0 0; }
+  .stat:nth-child(2n) { border-right: 1px solid var(--border); }
+  .stat:last-child { border-right: 0; }
+  .stat { padding: 34px 20px; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .section-head--split { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+  .section-head--split > div { max-width: 640px; }
+  .cta-band { padding: 56px 52px; }
+  .cta-band__inner { grid-template-columns: 1.4fr auto; }
+  .dept-full { grid-template-columns: 300px 1fr; }
+  .facility-row { grid-template-columns: 1fr 1fr; gap: 56px; padding: 56px 0; }
+  .facility-row:nth-child(even) .facility-row__media { order: 2; }
+  .profile-hero { grid-template-columns: 340px 1fr; gap: 48px; }
+  .profile-facts { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  .footer__bottom .container { flex-direction: row; justify-content: space-between; align-items: center; }
+  .toolbar { grid-template-columns: 1fr 1fr; align-items: center; }
+  .toolbar .chips { grid-column: 1 / -1; }
+  .toolbar--3 { grid-template-columns: 2fr 1fr 1fr; }
+  .toolbar--3 .chips { grid-column: 1 / -1; }
+  .hero__float { padding: 16px 22px; }
+}
+
+/* ---------- ≥ 1024px : small desktops ---------- */
+@media (min-width: 1024px) {
+  .hero { padding: 72px 0 140px; }
+  .hero__grid { grid-template-columns: 1.08fr .92fr; gap: 64px; }
+  .hero__float--a { left: -44px; }
+  .hero__float--b { right: -30px; }
+  .split { grid-template-columns: 1fr 1fr; gap: 72px; }
+  .dept-grid { grid-template-columns: repeat(3, 1fr); }
+  .dept-grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .doctor-grid { grid-template-columns: repeat(3, 1fr); }
+  .doctor-grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .facility-grid { grid-template-columns: repeat(4, 1fr); }
+  .facility-grid .facility-card--wide { grid-column: span 2; }
+  .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
+  .cond-grid { grid-template-columns: repeat(3, 1fr); }
+  .cond-pills { grid-template-columns: repeat(3, 1fr); }
+  .leader-grid { grid-template-columns: repeat(4, 1fr); }
+  .accred-grid { grid-template-columns: repeat(3, 1fr); }
+  .info-grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .page-hero { padding: 64px 0 72px; }
+  .page-hero__grid { grid-template-columns: 1.15fr .85fr; gap: 56px; }
+  .page-hero__media { display: block; }
+  .detail-layout { grid-template-columns: minmax(0, 1fr) 340px; gap: 48px; }
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1.1fr 1.3fr; }
+  .contact-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+  .appointment-layout { display: grid; grid-template-columns: 1.45fr .8fr; gap: 40px; align-items: start; }
+  .dept-full { grid-template-columns: 340px 1fr; }
+}
+
+/* ---------- ≥ 1100px : full desktop navigation ---------- */
+@media (min-width: 1100px) {
+  .nav { display: block; }
+  .header__cta { display: inline-flex; }
+  .nav-toggle { display: none; }
+  .topbar__list li.lg { display: flex; }
+  /* Quick-action bar is a mobile pattern only */
+  .quickbar { display: none; }
+  body { padding-bottom: 0; }
+  .back-to-top { bottom: 28px; right: 28px; }
+  .nav__link { padding: 10px 10px; font-size: .95rem; }
+  .nav__link.is-active::after { left: 10px; right: 10px; }
+}
+
+/* ---------- ≥ 1280px ---------- */
+@media (min-width: 1280px) {
+  .nav__link { padding: 10px 14px; font-size: .98rem; }
+  .nav__link.is-active::after { left: 14px; right: 14px; }
+}
+
+/* ---------- Below 1024px: sidebar no longer sticky ---------- */
+@media (max-width: 1023.98px) {
+  .sidebar { position: static; }
+  .contact-layout > * + *, .appointment-layout > * + * { margin-top: 32px; }
+}
+
+/* ---------- Very small phones ---------- */
+@media (max-width: 380px) {
+  :root { --gutter: 16px; }
+  .btn { padding: 12px 20px; }
+  .logo__sub { display: none; }
+  .hero__float { display: none; }
+  .doctor-card__actions { grid-template-columns: 1fr; }
+}
+
+/* ---------- Print: clean, ink-friendly output ---------- */
+@media print {
+  .topbar, .header, .footer, .quickbar, .back-to-top, .cta-band, .mobile-nav { display: none !important; }
+  body { padding: 0; font-size: 12pt; }
+  .section { padding: 24px 0; }
+}

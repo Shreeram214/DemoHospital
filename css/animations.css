@@ -1,0 +1,67 @@
+/* =========================================================================
+   LifeCare — Animations
+   Subtle, purposeful motion only. Everything respects the user's
+   "reduce motion" system preference (see bottom of file).
+   ========================================================================= */
+
+/* ---------- Scroll reveal (toggled by IntersectionObserver in main.js) ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2, .8, .2, 1); }
+.reveal.reveal--left { transform: translateX(-32px); }
+.reveal.reveal--right { transform: translateX(32px); }
+.reveal.reveal--zoom { transform: scale(.94); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Stagger children of a revealed group */
+.reveal-stagger > * { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s cubic-bezier(.2, .8, .2, 1); }
+.reveal-stagger.is-visible > * { opacity: 1; transform: none; }
+.reveal-stagger.is-visible > *:nth-child(2) { transition-delay: .07s; }
+.reveal-stagger.is-visible > *:nth-child(3) { transition-delay: .14s; }
+.reveal-stagger.is-visible > *:nth-child(4) { transition-delay: .21s; }
+.reveal-stagger.is-visible > *:nth-child(5) { transition-delay: .28s; }
+.reveal-stagger.is-visible > *:nth-child(6) { transition-delay: .35s; }
+.reveal-stagger.is-visible > *:nth-child(7) { transition-delay: .42s; }
+.reveal-stagger.is-visible > *:nth-child(8) { transition-delay: .49s; }
+.reveal-stagger.is-visible > *:nth-child(n+9) { transition-delay: .55s; }
+
+/* If JavaScript is unavailable, never hide content */
+.no-js .reveal, .no-js .reveal-stagger > * { opacity: 1; transform: none; }
+
+/* ---------- Hero floating cards ---------- */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.hero__float--a { animation: float-y 6s ease-in-out infinite; }
+.hero__float--b { animation: float-y 7s ease-in-out infinite .8s; }
+
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.hero__ring { animation: spin-slow 60s linear infinite; }
+
+/* ---------- Emergency pulse ---------- */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(200, 38, 58, .45); }
+  70% { box-shadow: 0 0 0 14px rgba(200, 38, 58, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(200, 38, 58, 0); }
+}
+.pulse { animation: pulse-ring 2.2s infinite; }
+
+/* Heartbeat line under hero badge */
+@keyframes beat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.18); } 30% { transform: scale(1); } 45% { transform: scale(1.12); } }
+.beat { animation: beat 1.8s ease-in-out infinite; display: inline-block; }
+
+/* ---------- Form feedback ---------- */
+@keyframes shake { 10%, 90% { transform: translateX(-1px); } 20%, 80% { transform: translateX(2px); } 30%, 50%, 70% { transform: translateX(-4px); } 40%, 60% { transform: translateX(4px); } }
+.shake { animation: shake .45s; }
+
+@keyframes pop-in { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: scale(1); } }
+.pop-in { animation: pop-in .45s cubic-bezier(.2, .8, .2, 1); }
+
+@keyframes fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.fade-up { animation: fade-up .45s ease both; }
+
+/* ---------- Accessibility: honour reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; }
+}

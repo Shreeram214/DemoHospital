@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a Doctor | LifeCare Multispeciality Hospital</title>
+  <meta name="description" content="Search LifeCare's doctor directory by name, department or specialty. View qualifications, experience and consultation timings, and request an appointment.">
+  <meta name="theme-color" content="#0b5c8a">
+  <meta property="og:title" content="Find a Doctor — LifeCare Multispeciality Hospital">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="doctors">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero__grid">
+        <div class="reveal">
+          <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Doctors</li></ol>
+          <span class="eyebrow">Doctor Directory</span>
+          <h1>Find the right specialist</h1>
+          <p>Search by doctor name, or filter by department and specialty to view profiles, consultation timings and book a visit.</p>
+        </div>
+        <div class="page-hero__media reveal reveal--right">
+          <img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=900&h=650&q=72" alt="Doctors reviewing information together" width="900" height="650">
+        </div>
+      </div>
+    </section>
+
+    <div class="disclaimer-strip" role="note">
+      <div class="container"><i data-icon="info"></i><span><strong>Demonstration content:</strong> All doctor names, photos, qualifications and experience shown are fictional sample profiles and do not represent real practitioners.</span></div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <form class="toolbar toolbar--3 reveal" role="search" onsubmit="return false">
+          <div class="search-field">
+            <i data-icon="search"></i>
+            <label for="doctor-search" class="sr-only">Search doctor by name</label>
+            <input id="doctor-search" class="input" type="search" placeholder="Search by doctor name…" autocomplete="off">
+          </div>
+          <div>
+            <label for="doctor-dept" class="sr-only">Filter by department</label>
+            <div class="field"><select id="doctor-dept"></select></div>
+          </div>
+          <div>
+            <label for="doctor-spec" class="sr-only">Filter by specialty</label>
+            <div class="field"><select id="doctor-spec"></select></div>
+          </div>
+          <div class="chips" id="doctor-chips" role="group" aria-label="Quick department filter"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;grid-column:1/-1;flex-wrap:wrap">
+            <p id="doctor-meta" class="results-meta mb-0" aria-live="polite"></p>
+            <button type="button" class="btn btn--ghost btn--sm" id="doctor-reset"><i data-icon="x"></i>Clear filters</button>
+          </div>
+        </form>
+        <div class="doctor-grid" id="doctor-list"></div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <div class="cta-band reveal reveal--zoom">
+          <div class="cta-band__inner">
+            <div><h2>Need help choosing a doctor?</h2><p>Tell us your symptoms and our patient care team will recommend the right specialist.</p></div>
+            <div class="cta-band__actions">
+              <a data-site-link="phone" href="tel:+917972407907" class="btn btn--white"><i data-icon="phone"></i>Call Help Desk</a>
+              <a href="appointment.html" class="btn btn--outline"><i data-icon="calendarCheck"></i>Book Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/departments.js"></script>
+  <script src="js/doctors.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Department Details | LifeCare Multispeciality Hospital</title>
+  <meta name="description" content="Department overview, conditions treated, symptoms, diagnostic services, specialists and related facilities at LifeCare Multispeciality Hospital.">
+  <meta name="theme-color" content="#0b5c8a">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="department-details">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- Filled dynamically from js/departments.js using ?id=department-id -->
+    <section class="page-hero" id="dept-hero" aria-live="polite"></section>
+
+    <section class="section">
+      <div class="container" id="dept-detail"></div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <div class="cta-band reveal reveal--zoom">
+          <div class="cta-band__inner">
+            <div><h2>Book a consultation with our specialists</h2><p>Request an appointment online or call us — we'll help you choose a convenient time.</p></div>
+            <div class="cta-band__actions">
+              <a href="appointment.html" class="btn btn--white" id="dept-cta"><i data-icon="calendarCheck"></i>Book Appointment</a>
+              <a data-site-link="phone" href="tel:+917972407907" class="btn btn--outline"><i data-icon="phone"></i>Call Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/departments.js"></script>
+  <script src="js/doctors.js"></script>
+  <script src="js/treatments.js"></script>
+  <script>
+    // Point the CTA at the selected department (pre-fills the appointment form)
+    (function () { var id = new URLSearchParams(location.search).get("id"); if (id) document.getElementById("dept-cta").href = "appointment.html?dept=" + encodeURIComponent(id); })();
+  </script>
+</body>
+</html>

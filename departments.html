@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medical Departments | LifeCare Multispeciality Hospital</title>
+  <meta name="description" content="Explore 12 medical departments at LifeCare — Cardiology, Neurology, Orthopedics, General Medicine, Pediatrics, Gynecology, Dermatology, Oncology, Gastroenterology, Urology, ENT and Ophthalmology.">
+  <meta name="theme-color" content="#0b5c8a">
+  <meta property="og:title" content="Medical Departments — LifeCare Multispeciality Hospital">
+  <meta property="og:description" content="Specialised care across 12 departments.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="departments">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero__grid">
+        <div class="reveal">
+          <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Departments</li></ol>
+          <span class="eyebrow">Medical Departments</span>
+          <h1>Expert care across 12 specialities</h1>
+          <p>Find the right department for your health concern. Each department is supported by shared diagnostics, critical care and rehabilitation services.</p>
+        </div>
+        <div class="page-hero__media reveal reveal--right">
+          <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=900&h=650&q=72" alt="Team of doctors in discussion" width="900" height="650">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar reveal" role="search">
+          <div class="search-field">
+            <i data-icon="search"></i>
+            <label for="dept-search" class="sr-only">Search departments or conditions</label>
+            <input id="dept-search" class="input" type="search" placeholder="Search a department or condition, e.g. “knee pain”" autocomplete="off">
+          </div>
+          <p id="dept-meta" class="results-meta mb-0" aria-live="polite"></p>
+          <div class="chips" id="dept-filters" role="group" aria-label="Filter by category"></div>
+        </div>
+        <div class="grid" id="dept-list"></div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <div class="cta-band reveal reveal--zoom">
+          <div class="cta-band__inner">
+            <div><h2>Not sure which department you need?</h2><p>Our patient care team will guide you to the right specialist based on your symptoms.</p></div>
+            <div class="cta-band__actions">
+              <a data-site-link="phone" href="tel:+917972407907" class="btn btn--white"><i data-icon="phone"></i>Call Help Desk</a>
+              <a href="appointment.html" class="btn btn--outline"><i data-icon="calendarCheck"></i>Book Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/departments.js"></script>
+  <script src="js/doctors.js"></script>
+</body>
+</html>

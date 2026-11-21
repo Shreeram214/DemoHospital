@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | LifeCare Multispeciality Hospital</title>
+  <meta name="description" content="Contact LifeCare Multispeciality Hospital — address, phone, email, working hours, 24×7 emergency number, map and directions.">
+  <meta name="theme-color" content="#0b5c8a">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero__grid">
+        <div class="reveal">
+          <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Contact Us</li></ol>
+          <span class="eyebrow">Get in Touch</span>
+          <h1>We're here to help</h1>
+          <p>Reach our help desk for appointments, reports, insurance or general enquiries. For emergencies, call us any time — day or night.</p>
+        </div>
+        <div class="page-hero__media reveal reveal--right">
+          <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=900&h=650&q=72" alt="Friendly hospital staff member" width="900" height="650">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div>
+          <div class="contact-grid reveal-stagger" style="grid-template-columns:1fr">
+            <div class="contact-item contact-item--emergency">
+              <span class="icon-badge icon-badge--red pulse"><i data-icon="ambulance"></i></span>
+              <div><h3>Emergency (24×7)</h3><p><a data-site-link="emergency" href="tel:+917972407907"><strong data-site="emergencyPhone">+91 79724 07907</strong></a><br>National ambulance: <a data-site-link="ambulance" href="tel:108"><strong>108</strong></a></p></div>
+            </div>
+            <div class="contact-item">
+              <span class="icon-badge"><i data-icon="pin"></i></span>
+              <div><h3>Hospital Address</h3><p data-site="address">Pune, Maharashtra, India</p></div>
+            </div>
+            <div class="contact-item">
+              <span class="icon-badge icon-badge--blue"><i data-icon="phone"></i></span>
+              <div><h3>Phone</h3><p><a data-site-link="phone" href="tel:+917972407907" data-site="phone">+91 79724 07907</a></p></div>
+            </div>
+            <div class="contact-item">
+              <span class="icon-badge"><i data-icon="mail"></i></span>
+              <div><h3>Email</h3><p><a data-site-link="email" href="#" data-site="email" style="word-break:break-all"></a></p></div>
+            </div>
+            <div class="contact-item">
+              <span class="icon-badge icon-badge--blue"><i data-icon="clock"></i></span>
+              <div><h3>Working Hours</h3><p><span data-site="hours"></span><br><span data-site="emergencyHours"></span><br>Sunday: Emergency services only</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="notice reveal" role="note" style="margin-bottom:20px">
+            <i data-icon="alert"></i>
+            <p><strong>Frontend demonstration only.</strong> This contact form does not submit or store patient enquiries. Please call or email the hospital directly. Do not enter sensitive medical information.</p>
+          </div>
+          <div class="form-card reveal" id="contact-card">
+            <h2 style="font-size:1.5rem;margin-bottom:20px">Send us a message</h2>
+            <form id="contact-form" class="form-grid form-grid--2" novalidate>
+              <div class="field">
+                <label for="c-name">Full name <span class="req">*</span></label>
+                <input id="c-name" name="name" type="text" autocomplete="name" data-validate="required name">
+                <span class="error-msg"></span>
+              </div>
+              <div class="field">
+                <label for="c-phone">Mobile number <span class="req">*</span></label>
+                <input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" data-validate="required phone">
+                <span class="error-msg"></span>
+              </div>
+              <div class="field span-2">
+                <label for="c-email">Email <span class="req">*</span></label>
+                <input id="c-email" name="email" type="email" autocomplete="email" data-validate="required email">
+                <span class="error-msg"></span>
+              </div>
+              <div class="field span-2">
+                <label for="c-subject">Subject <span class="req">*</span></label>
+                <select id="c-subject" name="subject" data-validate="required">
+                  <option value="">Choose a topic</option>
+                  <option>Appointment enquiry</option>
+                  <option>Medical reports</option>
+                  <option>Insurance &amp; billing</option>
+                  <option>Feedback</option>
+                  <option>General enquiry</option>
+                </select>
+                <span class="error-msg"></span>
+              </div>
+              <div class="field span-2">
+                <label for="c-message">Message <span class="req">*</span></label>
+                <textarea id="c-message" name="message" data-validate="required minlen:15" placeholder="How can we help you?"></textarea>
+                <span class="error-msg"></span>
+              </div>
+              <div class="span-2">
+                <button type="submit" class="btn btn--primary btn--block"><i data-icon="send"></i>Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="map" aria-labelledby="map-title">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <span class="eyebrow">Location</span>
+            <h2 id="map-title">Find us on the map</h2>
+            <p>Ample parking, wheelchair access and drop-off point at the main entrance.</p>
+          </div>
+          <a data-site-link="directions" href="#" class="btn btn--primary"><i data-icon="navigation"></i>Get Directions</a>
+        </div>
+        <div class="map-box reveal" style="min-height:440px">
+          <div>
+            <span class="map-box__pin"><i data-icon="pin"></i></span>
+            <h3>LifeCare Multispeciality Hospital</h3>
+            <p data-site="address"></p>
+            <div class="btn-row">
+              <button type="button" class="btn btn--primary btn--sm" data-load-map><i data-icon="globe"></i>Load Google Map</button>
+              <a data-site-link="directions" href="#" class="btn btn--outline btn--sm"><i data-icon="navigation"></i>Directions</a>
+            </div>
+            <p style="font-size:.82rem;margin:16px 0 0">Map loads from Google only when you click, to keep this page fast and private.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/departments.js"></script>
+  <script src="js/appointment.js"></script>
+</body>
+</html>

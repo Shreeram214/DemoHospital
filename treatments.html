@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Treatments &amp; Conditions | LifeCare Multispeciality Hospital</title>
+  <meta name="description" content="Patient-friendly guide to conditions treated at LifeCare — heart disease, diabetes, high blood pressure, arthritis, neurological, skin, digestive, kidney, women's and children's health.">
+  <meta name="theme-color" content="#0b5c8a">
+  <meta property="og:title" content="Treatments & Conditions — LifeCare Multispeciality Hospital">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="treatments">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero__grid">
+        <div class="reveal">
+          <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Treatments &amp; Conditions</li></ol>
+          <span class="eyebrow">Patient Information</span>
+          <h1>Treatments &amp; conditions</h1>
+          <p>Simple, easy-to-read information about common health conditions, their symptoms and the care available at LifeCare.</p>
+        </div>
+        <div class="page-hero__media reveal reveal--right">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&h=650&q=72" alt="Doctor reviewing health information on a tablet" width="900" height="650">
+        </div>
+      </div>
+    </section>
+
+    <div class="disclaimer-strip" role="note">
+      <div class="container"><i data-icon="alert"></i><span><strong>For general education only.</strong> This information is not a substitute for professional medical advice, diagnosis or treatment. Always consult a qualified doctor. In an emergency, call <a data-site-link="ambulance" href="tel:108">108</a> or our emergency line immediately.</span></div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar reveal" role="search">
+          <div class="search-field">
+            <i data-icon="search"></i>
+            <label for="condition-search" class="sr-only">Search conditions or symptoms</label>
+            <input id="condition-search" class="input" type="search" placeholder="Search a condition or symptom, e.g. “joint pain”, “fever”" autocomplete="off">
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <p id="condition-meta" class="results-meta mb-0" aria-live="polite"></p>
+            <button type="button" class="btn btn--ghost btn--sm" id="condition-reset"><i data-icon="x"></i>Reset</button>
+          </div>
+          <div class="chips" id="condition-filters" role="group" aria-label="Filter by department"></div>
+        </div>
+        <div id="condition-list"></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="tfaq">
+      <div class="container" style="max-width:860px">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Good to Know</span>
+          <h2 id="tfaq">Common treatment questions</h2>
+        </div>
+        <div class="accordion reveal">
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button">How do I know which specialist to see?<span class="accordion__icon"><i data-icon="plus"></i></span></button>
+            <div class="accordion__panel"><div><p>If you're unsure, start with a General Medicine consultation. Our physicians will examine you and refer you to the right specialist if needed. You can also call our help desk for guidance.</p></div></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button">Can I get diagnostic tests on the same day?<span class="accordion__icon"><i data-icon="plus"></i></span></button>
+            <div class="accordion__panel"><div><p>Most blood tests, X-rays, ECGs and ultrasounds can be done on the day of your consultation. Some scans like MRI may need a scheduled slot.</p></div></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button">Do you offer second opinions?<span class="accordion__icon"><i data-icon="plus"></i></span></button>
+            <div class="accordion__panel"><div><p>Yes. Bring your previous reports and imaging, and our specialists will review your diagnosis and treatment plan with you.</p></div></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button">Are minimally invasive surgeries available?<span class="accordion__icon"><i data-icon="plus"></i></span></button>
+            <div class="accordion__panel"><div><p>Many procedures — including laparoscopic, arthroscopic, endoscopic and laser surgeries — are performed with smaller incisions for faster recovery. Your surgeon will advise whether it suits you.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal reveal--zoom">
+          <div class="cta-band__inner">
+            <div><h2>Talk to a specialist about your symptoms</h2><p>Early diagnosis makes treatment simpler. Book a consultation today.</p></div>
+            <div class="cta-band__actions">
+              <a href="appointment.html" class="btn btn--white"><i data-icon="calendarCheck"></i>Book Appointment</a>
+              <a href="doctors.html" class="btn btn--outline"><i data-icon="search"></i>Find a Specialist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/departments.js"></script>
+  <script src="js/treatments.js"></script>
+</body>
+</html>
