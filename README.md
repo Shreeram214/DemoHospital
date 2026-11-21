@@ -3,6 +3,8 @@
 A premium, fully responsive hospital website built with **HTML5, CSS3 and vanilla JavaScript only**.
 No frameworks, no build step, no backend. Open `index.html` and it works.
 
+**Live demo:** https://lifecarehospitaldemo.pages.dev · **Repo:** https://github.com/Shreeram214/DemoHospital
+
 > ⚠️ **Demonstration content.** Doctor profiles, leadership, statistics, testimonials and
 > accreditations are fictional samples. Forms validate in the browser but **do not submit
 > anything**. Replace sample content with verified hospital information before going live.
@@ -86,10 +88,10 @@ Then open <http://localhost:8080>. (Or use `npx serve .` or VS Code's *Live Serv
 
 **A. Drag-and-drop (fastest, no Git)**
 1. Log in to the Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Upload assets**.
-2. Name the project (e.g. `lifecare-hospital`) and upload the `hospital-website` folder (or a ZIP of it).
+2. Name the project (e.g. `lifecarehospitaldemo`) and upload the `hospital-website` folder (or a ZIP of it).
 3. Click **Deploy** — the site is live at `https://<project>.pages.dev`.
 
-**B. From GitHub (auto-deploys on every push)**
+**B. From GitHub (auto-deploys on every push)** — this is how the live demo is set up (Pages project `lifecarehospitaldemo` → repo `DemoHospital`, branch `main`).
 1. Push this folder to a GitHub repository.
 2. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git** → choose the repo.
 3. Build settings: **Framework preset:** None · **Build command:** *(leave empty)* · **Build output directory:** `/`
@@ -98,7 +100,7 @@ Then open <http://localhost:8080>. (Or use `npx serve .` or VS Code's *Live Serv
 
 **C. From the command line**
 ```powershell
-npx wrangler pages deploy hospital-website --project-name lifecare-hospital
+npx wrangler pages deploy hospital-website --project-name lifecarehospitaldemo
 ```
 
 After deploying, add a custom domain under **Pages project → Custom domains**, and update the domain in
